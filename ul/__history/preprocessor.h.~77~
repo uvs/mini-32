@@ -1,0 +1,50 @@
+//---------------------------------------------------------------------------
+
+#ifndef _PREPROCESSOR_H_
+#define _PREPROCESSOR_H_
+
+#include <vcl.h>
+#include <RegularExpressions.hpp>
+
+#define INCLUDE_COUNT    ( 1024 )
+#define PREPROCESS_COUNT ( 1024 )
+
+class preprocessor
+{
+	private:
+		AnsiString	  source;
+		AnsiString	  result;
+		//AnsiString	  code;
+		TStringList * code;
+		TStringList * error;
+		TStringDynArray parsing_result;
+
+		void g_1_replace_trigraph();	 			// Замена триргафов
+
+
+		TStringList * file;							// 1 #include
+		TRegEx 		* reg_include_local;
+		TRegEx 		* reg_include_global;
+		int parse_include_global();
+		int parse_include_local();
+
+		TRegEx 		* reg_comments_multi;           // 2 Комментарии
+		void parse_comments_multi();
+		TRegEx 		* reg_comments_single;
+		void parse_comments_single();
+
+        AnsiString dyn2str( TStringDynArray arr );
+
+
+	public:
+		preprocessor();
+		void load_code( AnsiString source );
+		void load_code( TStringList * source );
+		int process( TStringList * error );
+		AnsiString save_code();
+		~preprocessor();
+};
+
+//---------------------------------------------------------------------------
+
+#endif

@@ -1,0 +1,6 @@
+#include "identify.h"
+
+identify::identify()
+{
+	name[ 0 ] = 0;
+}

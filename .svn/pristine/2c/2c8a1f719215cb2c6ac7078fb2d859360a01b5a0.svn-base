@@ -1,0 +1,37 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "identify.h"
+#include "preprocessor.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+#include <iostream.h>
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	ids = new identify();
+	p = new preprocessor();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	TStringList * l;
+	l = new TStringList();
+	l->LoadFromFile( "D:/home/mini-32/a.c" );
+
+	//p->load_code( l->Text );
+	p->load_code( l );
+	p->process(0);
+
+    Memo1->Text = p->save_code();
+
+	Label1->Caption = l->Count;
+}
+//---------------------------------------------------------------------------

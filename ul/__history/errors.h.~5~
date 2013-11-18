@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+
+#ifndef errorsH
+#define errorsH
+
+enum error_kind
+{
+	ERROR = 1,
+	WARNING;
+};
+
+class errors
+{
+	private:
+		int kind;
+
+
+	public:
+		errors();
+};
+
+
+
+#endif

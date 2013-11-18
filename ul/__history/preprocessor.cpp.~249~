@@ -1,0 +1,165 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "preprocessor.h"
+#include <RegularExpressions.hpp>
+
+// ------------------------------------------------------------------------
+
+void preprocessor::g_1_replace_trigraph()
+{
+	int rownum, colnum;
+	for( rownum = 0; rownum < code->Count; rownum++ )
+	{
+		colnum = code->Values[ rownum ].Pos( "??=" );
+		if( colnum > 0 )
+		{
+
+		}
+	}
+
+	//result = StringReplace( code, "??=", "#",  TReplaceFlags() );
+	result = StringReplace( result, "??/", "\\", TReplaceFlags() );
+	result = StringReplace( result, "??'", "^",  TReplaceFlags() );
+	result = StringReplace( result, "??(", "[",  TReplaceFlags() );
+	result = StringReplace( result, "??)", "]",  TReplaceFlags() );
+	result = StringReplace( result, "??!", "|",  TReplaceFlags() );
+	result = StringReplace( result, "??<", "{",  TReplaceFlags() );
+	result = StringReplace( result, "??>", "}",  TReplaceFlags() );
+	result = StringReplace( result, "??-", "~",  TReplaceFlags() );
+
+}
+// ------------------------------------------------------------------------
+
+preprocessor::preprocessor()
+{
+	reg_include_local  = new TRegEx( "\#include[ |\t]*[\"](.*)[\"]" );
+	reg_include_global = new TRegEx( "\#include[ |\t]*[\<](.*)[\>]" );
+	reg_comments_multi = new TRegEx( "[\/][\*].*?[\*][\/]",
+		TRegExOptions() << roSingleLine );
+	reg_comments_single = new TRegEx( "\/\/.*?[\r|\n]",
+		TRegExOptions() << roSingleLine );
+
+	file = new TStringList();
+
+	//source = new TStringList();
+	//result = new TStringList();
+	source = "";
+}
+// ------------------------------------------------------------------------
+
+void preprocessor::load_code( AnsiString source )
+{
+	this->source = source + " ";
+}
+// ------------------------------------------------------------------------
+
+void preprocessor::load_code( TStringList * source )
+{
+	code = new TStringList();
+	*code = *source;
+}
+// ------------------------------------------------------------------------
+
+AnsiString preprocessor::save_code()
+{
+	return result;
+}
+// ------------------------------------------------------------------------
+
+int preprocessor::process( TStringList * error )
+{
+	int i;
+	unsigned int k;
+
+	//code = source;
+	g_1_replace_trigraph();
+
+	/*
+
+	for( i = 0; i < INCLUDE_COUNT; i++ )
+	{
+		k = 0;
+		k += parse_include_global();
+		k += parse_include_local();
+		if( k < 1 )
+			break;
+	}
+
+	parse_comments_multi();
+	parse_comments_single();
+	*/
+	return 0;
+}
+// ------------------------------------------------------------------------
+
+int preprocessor::parse_include_global()
+{
+	int i, count = 0;
+
+	// Глобальные инклуды
+	parsing_result = reg_include_global->Split( result );
+	for( i = 1; i < parsing_result.Length; i += 2 )
+	{
+		file->LoadFromFile( "d:/home/mini-32/" + parsing_result[ i ] );
+		parsing_result[ i ] = file->Text;
+		count++;
+	}
+	result = dyn2str( parsing_result );
+	return count;
+}
+// ------------------------------------------------------------------------
+
+int preprocessor::parse_include_local()
+{
+	int i, count = 0;
+
+	// Локальные инклуды
+	parsing_result = reg_include_local->Split( result );
+	for( i = 1; i < parsing_result.Length; i += 2 )
+	{
+		file->LoadFromFile( "d:/home/mini-32/" + parsing_result[ i ] );
+		parsing_result[ i ] = file->Text;
+		count++;
+	}
+	result = dyn2str( parsing_result );
+	return count;
+}
+// ------------------------------------------------------------------------
+
+void preprocessor::parse_comments_multi()
+{
+	parsing_result = reg_comments_multi->Split( result );
+	result = dyn2str( parsing_result );
+}
+// ------------------------------------------------------------------------
+
+void preprocessor::parse_comments_single()
+{
+	parsing_result = reg_comments_single->Split( result );
+	result = dyn2str( parsing_result );
+}
+// ------------------------------------------------------------------------
+
+AnsiString preprocessor::dyn2str( TStringDynArray arr )
+{
+	AnsiString result = "";
+	int i;
+	for( i = 0; i < arr.Length; i++ )
+		result += arr[ i ];
+	return result;
+}
+// ------------------------------------------------------------------------
+
+preprocessor::~preprocessor()
+{
+	delete reg_include_global;
+	delete reg_include_local;
+	delete reg_comments_multi;
+	//delete source;
+	//delete result;
+}
+
+#pragma package(smart_init)
+

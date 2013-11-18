@@ -1,0 +1,22 @@
+//---------------------------------------------------------------------------
+
+#ifndef preprocessor_trigraphsH
+#define preprocessor_trigraphsH
+
+#include <vcl.h>
+
+// При замене триграфа - создаётся warning с номером 1500
+
+class preprocessor_trigraphs
+{
+	protected:
+	TStringList * code;
+	public:
+		preprocessor_trigraphs();
+
+
+};
+
+
+
+#endif

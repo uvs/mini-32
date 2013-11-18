@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.124,C:\Users\sh.VNII\Documents\RAD Studio\Projects\Project1.cbproj=D:\home\mini-32\ul\ul.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.289,D:\home\mini-32\ul\Unit2.cpp=D:\home\mini-32\ul\preprocessor_base.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.283,=C:\Users\sh.VNII\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.554,C:\Users\sh.VNII\Documents\RAD Studio\Projects\Unit1.h=D:\home\mini-32\ul\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.090,=D:\home\mini-32\ul\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.523,D:\home\mini-32\ul\Unit2.cpp=D:\home\mini-32\ul\errors.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.818,=D:\home\mini-32\ul\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.200,D:\home\mini-32\ul\Unit2.cpp=D:\home\mini-32\ul\code.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.016,D:\home\mini-32\ul\Unit2.cpp=D:\home\mini-32\ul\preprocessor_trigraphs.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.208,D:\home\mini-32\ul\File1.h=D:\home\mini-32\ul\preprocessor_trigraphs.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.133,=D:\home\mini-32\ul\File1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.288,D:\home\mini-32\ul\identify.h=D:\home\mini-32\ul\id.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.313,D:\home\mini-32\ul\identify.h=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.801,D:\home\mini-32\ul\File1.h=D:\home\mini-32\ul\identify.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.202,D:\home\mini-32\ul\id.h=D:\home\mini-32\ul\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.554,C:\Users\sh.VNII\Documents\RAD Studio\Projects\Unit1.cpp=D:\home\mini-32\ul\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.455,=D:\home\mini-32\ul\File1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.658,D:\home\mini-32\ul\preprocessor.h=D:\home\mini-32\ul\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.028,=D:\home\mini-32\ul\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.501,=D:\home\mini-32\ul\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.806,D:\home\mini-32\ul\File1.cpp=D:\home\mini-32\ul\identify.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.453,D:\home\mini-32\ul\File1.cpp=D:\home\mini-32\ul\preprocessor_trigraphs.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.060,=D:\home\mini-32\ul\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.554,C:\Users\sh.VNII\Documents\RAD Studio\Projects\Unit1.dfm=D:\home\mini-32\ul\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.200,D:\home\mini-32\ul\Unit2.h=D:\home\mini-32\ul\code.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.016,D:\home\mini-32\ul\Unit2.h=D:\home\mini-32\ul\preprocessor_trigraphs.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.289,D:\home\mini-32\ul\Unit2.h=D:\home\mini-32\ul\preprocessor_base.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.523,D:\home\mini-32\ul\Unit2.h=D:\home\mini-32\ul\errors.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.979,=D:\home\mini-32\ul\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.927,D:\home\mini-32\ul\preprocessor_trigraphs.h=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.815,=D:\home\mini-32\ul\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.410,=D:\home\mini-32\ul\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.658,D:\home\mini-32\ul\preprocessor.cpp=D:\home\mini-32\ul\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.288,D:\home\mini-32\ul\identify.cpp=D:\home\mini-32\ul\id.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.835,D:\home\mini-32\ul\identify.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.904,D:\home\mini-32\ul\preprocessor_trigraphs.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.202,D:\home\mini-32\ul\id.cpp=D:\home\mini-32\ul\Unit2.cpp</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="ul.cpp"/>
+    <File Path="preprocessor.cpp"/>
+    <File Path="preprocessor.cpp"/>
+    <File Path="preprocessor.h"/>
+    <File Path="Unit1.cpp"/>
+    <File Path="Unit1.cpp"/>
+    <File Path="Unit1.dfm"/>
+    <File Path="Unit1.h"/>
+    <File Path="identify.cpp"/>
+    <File Path="identify.cpp"/>
+    <File Path="identify.h"/>
+    <File Path="preprocessor_trigraphs.cpp"/>
+    <File Path="preprocessor_trigraphs.cpp"/>
+    <File Path="preprocessor_trigraphs.h"/>
+    <File Path="errors.cpp"/>
+    <File Path="errors.cpp"/>
+    <File Path="errors.h"/>
+    <File Path="code.cpp"/>
+    <File Path="code.cpp"/>
+    <File Path="code.h"/>
+    <File Path="preprocessor_base.cpp"/>
+    <File Path="preprocessor_base.cpp"/>
+    <File Path="preprocessor_base.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

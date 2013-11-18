@@ -1,0 +1,19 @@
+//---------------------------------------------------------------------------
+
+#ifndef preprocessor_trigraphsH
+#define preprocessor_trigraphsH
+
+// При замене триграфа - создаётся warning с номером 1500
+
+class preprocessor_trigraphs
+{
+    TStringList * code;
+	public:
+		preprocessor_trigraphs();
+
+
+};
+
+
+
+#endif
